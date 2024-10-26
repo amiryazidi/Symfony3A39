@@ -1,0 +1,23 @@
+
+
+<form  method='post'  action='/dql'>
+ <label> search  </label>
+ <input type="text"  name="recup">
+ <input type="submit" value="search">
+
+</form>
+
+<table border='2'> 
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>agme</th>
+   
+    </tr>
+    <tr {% for st in students %} >
+            <td>{{ st.id }}</td>
+            <td>{{ st.name | upper }}</td>
+            <td>{{ st.age }}</td>
+     
+    </tr    {% endfor %}>
+</table>
